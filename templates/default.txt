@@ -1,0 +1,15 @@
+Dear {name},
+
+I am {sender_name}, and I am writing to express my sincere interest in the {position} role at {company}. I believe my skills, academic background, and passion for technology make me a strong candidate for this opportunity.
+
+I have hands-on experience with modern web technologies, software development practices, and problem-solving through competitive programming and personal projects. I am eager to contribute to your team and grow within a dynamic, innovative environment.
+
+I have attached my resume for your consideration. I would welcome the chance to discuss how my background aligns with the goals at {company}. Please feel free to reach out at your convenience.
+
+Thank you for your time and consideration.
+
+Warm regards,
+{sender_name}
+
+---
+Sent via Placement Email Bot Web App | {date}

@@ -1,0 +1,337 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automated placement email bot - Send personalized emails to HR contacts and companies for job applications">
+  <title>Placement Email Bot — Automated Outreach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">P</span>
+        <div class="header-copy">
+          <h1>Placement Email Bot</h1>
+          <p class="subtitle">Premium outreach workspace for placement campaigns</p>
+          <div class="header-badges">
+            <span>Private drafts</span>
+            <span>Contact import</span>
+            <span>Controlled sending</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="setup">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>Setup</span>
+      </button>
+      <button class="tab-btn" data-tab="contacts">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Contacts</span>
+      </button>
+      <button class="tab-btn" data-tab="template">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Template</span>
+      </button>
+      <button class="tab-btn" data-tab="attachments">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+        <span>Attachments</span>
+      </button>
+      <button class="tab-btn" data-tab="send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <span>Send</span>
+      </button>
+    </nav>
+
+    <!-- Tab Content -->
+    <main class="tab-content">
+      <!-- ===== SETUP TAB ===== -->
+      <section id="tab-setup" class="tab-panel active">
+        <div class="panel-header">
+          <h2>Account Setup</h2>
+          <p>Configure your Gmail credentials for sending emails</p>
+        </div>
+        <div class="glass-card">
+          <div class="form-group">
+            <label for="gmail-input">Gmail Address</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <input type="email" id="gmail-input" placeholder="your.email@gmail.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="app-password-input">App Password</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input type="password" id="app-password-input" placeholder="xxxx xxxx xxxx xxxx">
+              <button class="toggle-password" id="toggle-password" type="button" title="Toggle visibility">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <small class="hint">Generate at <a href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener">Google App Passwords</a></small>
+          </div>
+          <div class="form-group">
+            <label for="sender-name-input">Sender Name</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <input type="text" id="sender-name-input" placeholder="Raghav Sharma">
+            </div>
+          </div>
+          <button class="btn btn-primary" id="save-setup-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Configuration
+          </button>
+          <div id="setup-status" class="status-msg"></div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACTS TAB ===== -->
+      <section id="tab-contacts" class="tab-panel">
+        <div class="panel-header">
+          <h2>Contact List</h2>
+          <p>Upload your CSV or Excel file with contact details</p>
+        </div>
+        <div class="glass-card">
+          <div class="drop-zone" id="contacts-drop-zone">
+            <div class="drop-zone-content">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <p class="drop-zone-title">Drag & drop your contact file here</p>
+              <p class="drop-zone-hint">or click to browse — CSV, XLSX supported</p>
+              <p class="drop-zone-format">Required columns: <strong>Name, Email, Company, Position</strong></p>
+            </div>
+            <input type="file" id="contacts-file-input" accept=".csv,.xlsx,.xls" hidden>
+          </div>
+        </div>
+
+        <div class="glass-card" id="contacts-table-card" style="display:none;">
+          <div class="table-header">
+            <h3 id="contacts-count">0 Contacts Loaded</h3>
+            <button class="btn btn-danger btn-sm" id="clear-contacts-btn">Clear All</button>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="contacts-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Company</th>
+                  <th>Position</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="contacts-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEMPLATE TAB ===== -->
+      <section id="tab-template" class="tab-panel">
+        <div class="panel-header">
+          <h2>Email Template</h2>
+          <p>Compose your email with dynamic placeholders</p>
+        </div>
+        <div class="template-grid">
+          <div class="glass-card">
+            <div class="form-group">
+              <label for="subject-input">Subject Line</label>
+              <div class="input-wrapper">
+                <input type="text" id="subject-input" placeholder="Application for {position} at {company}">
+              </div>
+              <div class="placeholder-buttons" data-target="subject-input">
+                <button class="placeholder-btn" data-placeholder="{name}">👤 name</button>
+                <button class="placeholder-btn" data-placeholder="{company}">🏢 company</button>
+                <button class="placeholder-btn" data-placeholder="{position}">💼 position</button>
+                <button class="placeholder-btn" data-placeholder="{date}">📅 date</button>
+                <button class="placeholder-btn" data-placeholder="{sender_name}">✍️ sender</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="body-header">
+                <label for="body-input">Email Body</label>
+                <div class="mode-toggle">
+                  <button class="mode-btn active" data-mode="plain" id="mode-plain">Plain Text</button>
+                  <button class="mode-btn" data-mode="html" id="mode-html">HTML</button>
+                </div>
+              </div>
+              <textarea id="body-input" rows="14" placeholder="Dear {name},
+
+I am writing to express my interest in the {position} role at {company}.
+
+..."></textarea>
+              <div class="placeholder-buttons" data-target="body-input">
+                <button class="placeholder-btn" data-placeholder="{name}">👤 name</button>
+                <button class="placeholder-btn" data-placeholder="{company}">🏢 company</button>
+                <button class="placeholder-btn" data-placeholder="{position}">💼 position</button>
+                <button class="placeholder-btn" data-placeholder="{date}">📅 date</button>
+                <button class="placeholder-btn" data-placeholder="{sender_name}">✍️ sender</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card preview-card">
+            <h3>Live Preview</h3>
+            <p class="preview-hint" id="preview-hint">Preview shows how the email will look for the first contact</p>
+            <div class="preview-box">
+              <div class="preview-subject" id="preview-subject">Subject will appear here...</div>
+              <hr class="preview-divider">
+              <div class="preview-body" id="preview-body">Email body will appear here...</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ATTACHMENTS TAB ===== -->
+      <section id="tab-attachments" class="tab-panel">
+        <div class="panel-header">
+          <h2>Attachments & CC/BCC</h2>
+          <p>Add files and additional recipients</p>
+        </div>
+        <div class="attachments-grid">
+          <div class="glass-card">
+            <h3>File Attachments</h3>
+            <div class="drop-zone drop-zone-sm" id="attachments-drop-zone">
+              <div class="drop-zone-content">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                <p class="drop-zone-title">Drop attachments here</p>
+                <p class="drop-zone-hint">PDF, DOCX, images, etc.</p>
+              </div>
+              <input type="file" id="attachments-file-input" multiple hidden>
+            </div>
+            <div id="attachments-list" class="file-list"></div>
+          </div>
+
+          <div class="glass-card">
+            <h3>CC & BCC Recipients</h3>
+            <div class="form-group">
+              <label for="cc-input">CC (Carbon Copy)</label>
+              <div class="input-wrapper">
+                <input type="text" id="cc-input" placeholder="email1@example.com, email2@example.com">
+              </div>
+              <small class="hint">Comma-separated email addresses</small>
+            </div>
+            <div class="form-group">
+              <label for="bcc-input">BCC (Blind Carbon Copy)</label>
+              <div class="input-wrapper">
+                <input type="text" id="bcc-input" placeholder="email1@example.com, email2@example.com">
+              </div>
+              <small class="hint">Recipients won't see BCC addresses</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SEND TAB ===== -->
+      <section id="tab-send" class="tab-panel">
+        <div class="panel-header">
+          <h2>Send Emails</h2>
+          <p>Configure and launch your email campaign</p>
+        </div>
+        <div class="send-grid">
+          <div class="glass-card">
+            <h3>Send Configuration</h3>
+            <div class="form-group">
+              <label for="delay-slider">Delay Between Emails: <span id="delay-value">10</span>s</label>
+              <input type="range" id="delay-slider" min="1" max="60" value="10" class="styled-range">
+              <div class="range-labels">
+                <span>1s</span>
+                <span>30s</span>
+                <span>60s</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="limit-input">Send Limit (0 = unlimited)</label>
+              <div class="input-wrapper">
+                <input type="number" id="limit-input" value="0" min="0" placeholder="0">
+              </div>
+            </div>
+            <div class="form-group toggle-group">
+              <label>Dry Run Mode</label>
+              <div class="toggle-row">
+                <span class="toggle-desc">Preview emails without sending</span>
+                <label class="switch">
+                  <input type="checkbox" id="dry-run-toggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="send-summary" id="send-summary">
+              <div class="summary-item">
+                <span class="summary-label">Recipients</span>
+                <span class="summary-value" id="summary-recipients">0</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Attachments</span>
+                <span class="summary-value" id="summary-attachments">0</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Mode</span>
+                <span class="summary-value" id="summary-mode">Live</span>
+              </div>
+            </div>
+
+            <button class="btn btn-send" id="start-send-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Start Sending
+            </button>
+            <button class="btn btn-stop" id="stop-send-btn" style="display:none;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+              Stop Sending
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h3>Progress Dashboard</h3>
+            <div class="progress-section">
+              <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+              </div>
+              <div class="progress-percent" id="progress-percent">0%</div>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card stat-sent">
+                <div class="stat-number" id="stat-sent">0</div>
+                <div class="stat-label">Sent</div>
+              </div>
+              <div class="stat-card stat-failed">
+                <div class="stat-number" id="stat-failed">0</div>
+                <div class="stat-label">Failed</div>
+              </div>
+              <div class="stat-card stat-pending">
+                <div class="stat-number" id="stat-pending">0</div>
+                <div class="stat-label">Pending</div>
+              </div>
+              <div class="stat-card stat-skipped">
+                <div class="stat-number" id="stat-skipped">0</div>
+                <div class="stat-label">Skipped</div>
+              </div>
+            </div>
+
+            <div class="log-section">
+              <h4>Activity Log</h4>
+              <div class="log-container" id="log-container">
+                <div class="log-empty">No activity yet. Start sending to see real-time updates.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

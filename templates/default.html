@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Email</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f6f9; padding: 40px 0;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 32px 40px;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 600; letter-spacing: 0.5px;">
+                Application for {position}
+              </h1>
+              <p style="margin: 8px 0 0; color: rgba(255,255,255,0.85); font-size: 14px;">
+                {company} &bull; {date}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 36px 40px;">
+              <p style="margin: 0 0 18px; color: #2d3748; font-size: 15px; line-height: 1.7;">
+                Dear {name},
+              </p>
+
+              <p style="margin: 0 0 18px; color: #4a5568; font-size: 15px; line-height: 1.7;">
+                I am <strong>{sender_name}</strong>, and I am writing to express my sincere interest in the
+                <strong>{position}</strong> role at <strong>{company}</strong>. I believe my skills, academic
+                background, and passion for technology make me a strong candidate for this opportunity.
+              </p>
+
+              <p style="margin: 0 0 18px; color: #4a5568; font-size: 15px; line-height: 1.7;">
+                I have hands-on experience with modern web technologies, software development practices, and
+                problem-solving through competitive programming and personal projects. I am eager to contribute
+                to your team and grow within a dynamic, innovative environment.
+              </p>
+
+              <p style="margin: 0 0 18px; color: #4a5568; font-size: 15px; line-height: 1.7;">
+                I have attached my resume for your consideration. I would welcome the chance to discuss how my
+                background aligns with the goals at <strong>{company}</strong>. Please feel free to reach out
+                at your convenience.
+              </p>
+
+              <p style="margin: 0 0 6px; color: #2d3748; font-size: 15px; line-height: 1.7;">
+                Thank you for your time and consideration.
+              </p>
+
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 28px 0;" />
+
+              <!-- Signature -->
+              <p style="margin: 0; color: #2d3748; font-size: 15px; line-height: 1.7;">
+                Warm regards,
+              </p>
+              <p style="margin: 4px 0 0; color: #667eea; font-size: 16px; font-weight: 600;">
+                {sender_name}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f7fafc; padding: 20px 40px; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; color: #a0aec0; font-size: 12px; text-align: center;">
+                This email was sent via Placement Email Bot Web App &bull; {date}
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
